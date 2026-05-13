@@ -231,7 +231,7 @@ class EchoApp(tk.Tk):
     def __init__(self):
         super().__init__()
         self.title("Project Echo: Socio-Economic Income Predictor")
-        self.resizable(True, False)
+        self.resizable(True, True)
         self._load_model()
         self._build_ui()
 

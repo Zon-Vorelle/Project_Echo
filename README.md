@@ -115,18 +115,7 @@ pip install scikit-learn joblib pandas numpy xgboost lightgbm catboost fairlearn
 Run once from the project folder (same directory as `app.py`):
 
 ```bat
-pyinstaller --clean --onefile --windowed ^
-  --hidden-import=xgboost ^
-  --collect-all xgboost ^
-  --hidden-import=lightgbm ^
-  --collect-all lightgbm ^
-  --hidden-import=catboost ^
-  --collect-all catboost ^
-  --hidden-import=sklearn ^
-  --hidden-import=joblib ^
-  --add-data "income_pipeline.pkl;." ^
-  --name "ProjectEcho" ^
-  app.py
+pyinstaller --clean --onefile --windowed --hidden-import=xgboost --collect-all xgboost --hidden-import=lightgbm --collect-all lightgbm --hidden-import=catboost --collect-all catboost --hidden-import=sklearn --hidden-import=joblib --add-data "income_pipeline.pkl;." --name "ProjectEcho" app.py
 ```
 
 > The `--hidden-import` and `--collect-all` flags are required because PyInstaller does not
